@@ -1,0 +1,273 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+        font-family: $base-font-family;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block;
+}
+
+body {
+&.is-loading {
+    *, *:before, *:after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+}
+
+section {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+section.full {
+    height: 100vh;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.15em;
+    line-height: 1.75em;
+    margin-bottom: 10px;
+}
+
+/* Banner */
+
+#banner {
+    background: url(../background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .logo {
+        top: 55vh;
+        position: relative;
+
+        img {
+            // -moz-transform: scale(1);
+			// -webkit-transform: scale(1);
+			// -ms-transform: scale(1);
+			// transform: scale(1);
+			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+			transition: transform 0.5s ease, opacity 0.5s ease;
+            height: auto;
+            opacity: 1;
+            max-width: 90%;
+            
+            &:before, &:after {
+				-moz-transition-delay: 0.25s;
+				-webkit-transition-delay: 0.25s;
+				-ms-transition-delay: 0.25s;
+				transition-delay: 0s;
+            }
+        }
+    }
+
+    .more {
+        -moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
+        -webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
+        -ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
+        transition: transform 0.75s ease, opacity 0.75s ease;
+        -moz-transition-delay: 3.5s;
+        -webkit-transition-delay: 3.5s;
+        -ms-transition-delay: 3.5s;
+        transition-delay: 1.5s;
+        -moz-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        border: none;
+        bottom: 0;
+        color: white;
+        font-family: $open-sans-font;
+        font-size: 0.8em;
+        height: 8.5em;
+        left: 50%;
+        margin-left: -8.5em;
+        opacity: 1;
+        outline: 0;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        width: 16em;
+        z-index: 1;
+        text-decoration: none;
+
+        &:after {
+            background-image: url('../arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: 4em;
+            content: '';
+            display: block;
+            height: 1.5em;
+            left: 50%;
+            margin: 0 0 0 -0.75em;
+            position: absolute;
+            width: 1.5em;
+        }
+    }
+    
+    &:after {
+        -moz-transition: opacity 3s ease-in-out;
+        -webkit-transition: opacity 3s ease-in-out;
+        -ms-transition: opacity 3s ease-in-out;
+        transition: opacity 3s ease-in-out;
+        -moz-transition-delay: 1.25s;
+        -webkit-transition-delay: 1.25s;
+        -ms-transition-delay: 1.25s;
+        transition-delay: 1.25s;
+        background: blue;
+        content: '';
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+        section .full {
+            height: auto;
+        }
+
+        #banner .more {
+           // display: none;
+        }
+}
+        
+@media screen and (max-width: 1300px) {
+
+        #hours .inner {
+           max-width: 90%;
+        }
+        
+        #hours .left, .right {
+            width: 80%;
+        }
+}
+
+@media screen and (max-width: 900px) {
+        #hours .left{
+            width: 100%;
+            white-space: normal;
+        }
+        
+        #hours .right {
+            width: 100%;
+            white-space: normal;
+        }
+}
+
+/* Opening Hours */
+
+section.wrapper {
+    padding: 6em 0 4em 0;
+}
+
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row; /* works with row or column */
+   flex-direction: row;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+    max-width: 60%;
+} 
+
+.left {
+    white-space: nowrap;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 3em;
+}
+.right {
+    white-space: nowrap;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 3em;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+   font-size: 1em;
+}
+
+ul li span {
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media all and ( min-width: 600px ) {
+
+  .col-2-3 {
+    float: left;
+    width: 66.66%;
+  }
+  .col-1-2 {
+    float: left;
+    width: 50%;
+  }
+  .col-1-3 {
+    float: left;
+    width: 33.33%;
+  }
+  .col-1-4 {
+    float: left;
+    width: 25%;
+  }
+  .col-1-8 {
+    float: left;
+    width: 12.5%;
+  }
+
+}
+
+//Animation
+
+body.is-loading {
+    #banner {
+        img {
+            transform: scale(0.95);
+            opacity: 0;
+        }
+
+        .more {
+            transform: translateY(8.5em);
+            opacity: 0;
+        }
+
+        &:after {
+           opacity: 1;
+        }
+    }
+}
