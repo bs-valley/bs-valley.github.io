@@ -1,0 +1,9 @@
+- day: 'Mo-Mi:'
+  time: 'Ruhetag'
+  
+- day: 'Do & Fr:'
+  time: 'ab 11 Uhr geöffnet'
+  
+- day: 'Sa, So, Feiertags:'
+  time: 'ab 11 Uhr geöffnet'
+  
