@@ -193,7 +193,7 @@ img {
 /* Opening Hours */
 
 section.wrapper {
-    padding: 6em 0 4em 0;
+    padding: 4em 0 2em 0;
 }
 
 .flexcontainer {
@@ -216,13 +216,11 @@ section.wrapper {
     white-space: nowrap;
     width: 70%;
     margin: auto;
-    margin-bottom: 3em;
 }
 .right {
     white-space: nowrap;
     width: 70%;
     margin: auto;
-    margin-bottom: 3em;
 }
 
 ul {
@@ -251,10 +249,12 @@ ul li span {
 *:after {
   box-sizing: border-box;
 }
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.clearfix {
+
+    &:after {
+    content: "";
+    clear: both;
+    }
 }
 
 @media all and ( min-width: 800px ) {
@@ -280,6 +280,24 @@ ul li span {
     width: 12.5%;
   }
 
+}
+
+footer {
+    text-align: center;
+    display: block;
+    position: relative;
+    margin: 2em 0 2em 0;
+}
+
+// Social Media
+.facebook {
+    background-image: url('../images/social_facebook.svg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 1.5em;
+    width: 1.5em;
+    display: inline-block;
 }
 
 //Animation
