@@ -239,7 +239,7 @@ ul li span {
 .inline {
     display: table;
     table-layout: fixed;
-    width: 300px;
+    width: 100%;
 }
 
 .inline li{
@@ -257,7 +257,7 @@ ul li span {
   clear: both;
 }
 
-@media all and ( min-width: 600px ) {
+@media all and ( min-width: 800px ) {
 
   .col-2-3 {
     float: left;
