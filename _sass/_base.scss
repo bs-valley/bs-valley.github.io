@@ -236,6 +236,16 @@ ul li {
 ul li span {
 }
 
+.inline {
+    display: table;
+    table-layout: fixed;
+    width: 300px;
+}
+
+.inline li{
+    display: table-cell;
+    list-style: none;
+}
 *,
 *:before,
 *:after {
