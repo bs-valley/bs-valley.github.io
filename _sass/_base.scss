@@ -26,11 +26,7 @@ section {
     max-width: 100%;
     position: relative;
     overflow: hidden;
-}
-
-section.full {
-    height: 100vh;
-    text-align: center;
+		padding: 4em 0 2em 0;
 }
 
 h3 {
@@ -44,173 +40,65 @@ img {
     max-height: 100%;
 }
 
-/* Banner */
+/* intro */
 
-#banner {
-    background: url(../images/background_mini.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+#intro {
+	position: relative;
+	overflow: hidden;
+	height: 100vh;
+	background: url(../images/background_mini.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	text-align: center;
+	padding-left: 20px;
+	padding-right: 20px;
 
-    .logo {
-        position: relative;
-        width: 90%;
-        margin: 0 auto;
-        margin-top: 45vh;
-        height: 30vh;
+	.logo {
+		position: relative;
+		max-width: 100%;
+		margin-top: 45vh;
+		max-height: 40vh;
+	}
 
-        img {
-            -moz-transform: scale(1);
-			-webkit-transform: scale(1);
-			-ms-transform: scale(1);
-			transform: scale(1);
-			-moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
-			-webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
-			-ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
-			transition: transform 0.5s ease, opacity 0.5s ease;
-            opacity: 1;
-            
-            &:before, &:after {
-				-moz-transition-delay: 0.25s;
-				-webkit-transition-delay: 0.25s;
-				-ms-transition-delay: 0.25s;
-				transition-delay: 0s;
-            }
-        }
-    }
+	.more {
+		position: absolute;
+		text-align: center;
+		left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+		bottom: 20px;
+		margin-top: 2em;
+		text-align: center;
+		text-transform: uppercase;
+		color: white;
+		font-size: 0.8em;
+		margin-bottom: 10px;
+		text-decoration: none;
 
-    .more {
-        -moz-transition: -moz-transform 0.75s ease, opacity 0.75s ease;
-        -webkit-transition: -webkit-transform 0.75s ease, opacity 0.75s ease;
-        -ms-transition: -ms-transform 0.75s ease, opacity 0.75s ease;
-        transition: transform 0.75s ease, opacity 0.75s ease;
-        -moz-transition-delay: 3.5s;
-        -webkit-transition-delay: 3.5s;
-        -ms-transition-delay: 3.5s;
-        transition-delay: 1.5s;
-        -moz-transform: translateY(0);
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-        border: none;
-        bottom: 0;
-        color: white;
-        font-family: $open-sans-font;
-        font-size: 0.8em;
-        height: 6em;
-        margin-left: -8.5em;
-        opacity: 1;
-        outline: 0;
-        position: absolute;
-        text-align: center;
-        text-transform: uppercase;
-        width: 16em;
-        z-index: 1;
-        text-decoration: none;
-
-        &:after {
-            background-image: url('../images/arrow.svg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            bottom: 2em;
-            content: '';
-            display: block;
-            height: 1.5em;
-            left: 50%;
-            margin: 0 0 0 -0.75em;
-            position: absolute;
-            width: 1.5em;
-        }
-    }
-    
-    &:after {
-        -moz-transition: opacity 3s ease-in-out;
-        -webkit-transition: opacity 3s ease-in-out;
-        -ms-transition: opacity 3s ease-in-out;
-        transition: opacity 3s ease-in-out;
-        -moz-transition-delay: 1.25s;
-        -webkit-transition-delay: 1.25s;
-        -ms-transition-delay: 1.25s;
-        transition-delay: 1.25s;
-        content: '';
-        opacity: 0;
-    }
-}
-
-@media screen and (max-width: 250px) {
-
-        section .full {
-            height: auto;
-        }
-
-        #banner .more {
-            display: none;
-        }
-        
-        .logo {
-            height: 50px;
-        }
-}
-        
-@media screen and (max-width: 1300px) {
-
-        #hours .inner {
-           max-width: 90%;
-        }
-        
-        #hours .left, .right {
-            width: 80%;
-        }
-}
-
-@media screen and (max-width: 900px) {
-        #hours .left{
-            width: 100%;
-            white-space: normal;
-        }
-        
-        #hours .right {
-            width: 100%;
-            white-space: normal;
-        }
-}
-
-@media screen and (max-height: 450px) {
-        
-        #banner .logo {
-            margin-top: 30vh;
-            height: 40vh;
-        }
-        
-        #banner .more span {
-            display: none;
-        }
+		&:after {
+			content: '';
+			display: block;
+			margin: 0.5em 0 0 0;
+			height: 1.5em;
+			background-image: url('../images/arrow.svg');
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: contain;
+	}
+	}
 }
 
 
-/* Opening Hours */
 
-section.wrapper {
-    padding: 4em 0 2em 0;
+
+/* Opening opening-hours */
+
+#opening-hours {
+	margin: 30px;
 }
-
-.flexcontainer {
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-direction: row; /* works with row or column */
-   flex-direction: row;
-   -webkit-justify-content: center;
-   justify-content: center;
-}
-
-.inner {
-    margin-left: auto;
-    margin-right: auto;
-    overflow: auto;
-    max-width: 60%;
-} 
 
 .left {
     white-space: nowrap;
@@ -228,10 +116,7 @@ ul {
 }
 
 ul li {
-   font-size: 1em;
-}
-
-ul li span {
+   font-size: 0.8em;
 }
 
 .inline {
@@ -291,7 +176,7 @@ footer {
 
 // Social Media
 .facebook {
-    background-image: url('../images/social_facebook.svg'); 
+    background-image: url('../images/social_facebook.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -300,10 +185,56 @@ footer {
     display: inline-block;
 }
 
+@media screen and (max-width: 250px) {
+
+        #intro .more {
+            display: none;
+        }
+
+}
+
+@media screen and (max-width: 1300px) {
+        #opening-hours .left, .right {
+            width: 80%;
+        }
+
+				#opening-hours ul li {
+					font-size: 0.8em;
+				}
+}
+
+@media screen and (max-width: 900px) {
+        #opening-hours .left{
+            width: 100%;
+            white-space: normal;
+        }
+
+        #opening-hours .right {
+            width: 100%;
+            white-space: normal;
+						margin-top: 30px;
+        }
+
+}
+
+@media screen and (max-height: 650px) {
+
+        #intro .logo {
+            margin-top: 30vh;
+        }
+}
+
+@media screen and (max-height: 400px) {
+
+        #intro .logo {
+            margin-top: 10vh;
+        }
+}
+
 //Animation
 
 body.is-loading {
-    #banner {
+    #intro {
         img {
             transform: scale(0.95);
             opacity: 0;

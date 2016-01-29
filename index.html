@@ -1,21 +1,19 @@
 ---
 layout: default
 ---
-<section class="full" id="banner">
-    <div class="logo">
-        <img src="../images/logo.png" alt="Logo BS-Valley">
-    </div>
-    <a href="#hours" class="more"><span>Öffnungszeiten</span></a>
+<section id="intro">
+    <img class="logo" src="../images/logo.png" alt="Logo BS-Valley">
+      <a class="more" href="#opening-hours">Öffnungszeiten</a>
 </section>
 
-<section id="hours" class="wrapper">
-    <div class="inner clearfix">
+<section id="opening-hours" >
+    <div class="clearfix">
         <div class="col-1-2">
             <div class="left">
             <h3>Öffnungszeiten</h3>
             <ul>
                 {% for period in site.data.opening-hours %}
-                <ul class="inline"> 
+                <ul class="inline">
                     <li>{{ period.day }}</li>
                     <li>{{ period.time }}</li>
                 </ul>
@@ -28,7 +26,7 @@ layout: default
             <h3>Kontakt</h3>
             <ul>
                 {% for contact in site.data.contact %}
-                <ul class="inline"> 
+                <ul class="inline">
                     <li>{{ contact.type }}</li>
                     <li>{{ contact.data }}</li>
                 </ul>
@@ -39,4 +37,3 @@ layout: default
     </div>
 </section>
 <footer><a href="https://www.facebook.com/bsvalley/" class="facebook"></a></footer>
-
